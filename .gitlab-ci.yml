@@ -1,0 +1,14 @@
+include:
+  - project: a
+    file:
+      - /common.yml
+      - /pages.yml
+stages:
+  - test
+  - publish
+
+lint:
+  extends: .lint_charts
+
+pages:
+  extends: .helm_repo
